@@ -6,7 +6,7 @@
 
 - name: set k3s installed version
   ansible.builtin.set_fact:
-    installed_k3s_version: "{{ k3s_version_output.stdout_lines[+].split(' ')[2] }}"
+    installed_k3s_version: "{{ k3s_version_output.stdout_lines[0].split(' ')[2] }}"
 
 - name: Update node only if needed
   when: installed_k3s_version is version(k3s_version, '<')
