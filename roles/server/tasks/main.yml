@@ -50,7 +50,7 @@
     - name: Copy K3s service file [HA]
       ansible.builtin.template:
         src: "k3s-cluster-init.service.j2"
-        dest: "{{ system_dir }}/k3s.service"
+        dest: "{{ systemd_dir }}/k3s.service"
         owner: root
         group: root
         mode: "0640"
