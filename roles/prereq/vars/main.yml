@@ -1,3 +1,0 @@
----
-cluster_cidr: "{{ (server_config_yaml | from_yaml)['cluster-cidr'] | default('192.168.0/24') }}"
-service_cidr: "{{ (server_config_yaml | from_yaml)['service-cidr'] | default('192.168.122.0/24') }}"
