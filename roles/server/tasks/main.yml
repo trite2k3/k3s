@@ -110,7 +110,7 @@
 
     - name: Merge config if already exist on node
       when: kubeconfig != "~/.kube/config"
-      ansible.builting.shell: |
+      ansible.builtin.shell: |
         TFILE=$(mktemp)
         KUBECONFIG={{ kubeconfig }} kubectl config set-context {{ cluster_context }} --user={{ cluster_context }} --cluster={{ cluster_context }}
         KUBECONFIG={{ kubeconfig }} kubectl config view --flatten > ${TFILE}
