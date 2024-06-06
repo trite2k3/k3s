@@ -4,4 +4,4 @@
 stripped down version of official k3s ansible for my own needs
 
 
-ansible-playbook site.yml -K
+ansible-playbook site.yml -K -i inventory.yml
