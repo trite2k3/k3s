@@ -11,7 +11,7 @@
     installed_k3s_version: "{{ k3s_version_output.stdout_lines[0].split(' ')[2] }}"
 
 - name: Download artifact if needed
-  when: k3s_version_output.rc != 0 or installed_k3s_version is version(kes_version, '<')
+  when: k3s_version_output.rc != 0 or installed_k3s_version is version(k3s_version, '<')
   block:
     - name: Download k3s install script
       ansible.builtin.get_url:
