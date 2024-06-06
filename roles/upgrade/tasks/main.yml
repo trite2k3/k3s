@@ -44,7 +44,7 @@
       loop: "{{ k3s_service_files.files }}"
 
     - name: Restart k3s service [server]
-      when: "server_Group in group_names"
+      when: "server_group in group_names"
       ansible.builtin.systemd:
         state: restarted
         daemon_reload: true
