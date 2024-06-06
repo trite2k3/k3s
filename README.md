@@ -8,7 +8,6 @@ and update inventory.yml
 
 check with 
 $kubectl get nodes 
-
 on master node
 
 
