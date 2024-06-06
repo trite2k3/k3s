@@ -24,7 +24,7 @@
         remote_src: true
         mode: preserve
         force: true
-      loop: "{{ k3s_Service_files.files }}"
+      loop: "{{ k3s_service_files.files }}"
 
     - name: Install new k3s version
       ansible.builtin.command:
